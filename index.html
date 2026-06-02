@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bank System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+    <h1><span>Bank</span> System</h1>
+
+    <!-- Create Account -->
+    <input type="text" id="name" placeholder="Enter Name">
+    <input type="number" id="initialBalance" placeholder="Initial Balance">
+    <button onclick="createAccount()">Create Account</button>
+
+    <hr>
+
+    <!-- Transaction Section -->
+    <input type="number" id="accountNumber" placeholder="Enter Account Number">
+    <input type="number" id="transactionAmount" placeholder="Enter Amount">
+    <button onclick="deposit()">Deposit</button>
+    <button onclick="withdraw()">Withdraw</button>
+    <button onclick="checkBalance()">Check Balance</button>
+
+    <div id="output"></div>
+
+    <h3>All Accounts</h3>
+    <div id="accountList"></div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>

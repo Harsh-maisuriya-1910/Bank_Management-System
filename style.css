@@ -1,0 +1,87 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins",sans-serif;
+}
+
+body {
+    background: #519A66;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background: white;
+    padding: 25px;
+    width: 450px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.3);
+    text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.container::-webkit-scrollbar{
+    display: none;
+}
+
+h1{
+  margin-bottom: 20px;
+}
+
+h1 span{
+  color: #519A66;
+}
+
+input, button {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1.1rem;
+}
+
+input:focus{
+  outline: none;
+}
+
+button {
+    background: #25671E;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #519a66;
+}
+
+hr{
+  margin: 15px 0;
+  border: 1px solid #eee;
+}
+
+#output {
+    margin-top: 15px;
+    padding: 10px;
+    background: #f4f4f4;
+    border-radius: 5px;
+}
+
+#output span{
+  color: #519A66;
+}
+
+#accountList div{
+  background:#f4f4f4;
+  padding:8px;
+  margin:5px 0;
+  border-radius:5px;
+  text-align:left;
+}
