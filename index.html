@@ -1,34 +1,39 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Bank System</title>
-    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bank System - MVC</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <div class="container">
     <h1><span>Bank</span> System</h1>
 
-    <!-- Create Account -->
+    <!-- Create Account Section -->
     <input type="text" id="name" placeholder="Enter Name">
     <input type="number" id="initialBalance" placeholder="Initial Balance">
-    <button onclick="createAccount()">Create Account</button>
+    <button id="btnCreateAccount">Create Account</button>
 
     <hr>
 
     <!-- Transaction Section -->
     <input type="number" id="accountNumber" placeholder="Enter Account Number">
     <input type="number" id="transactionAmount" placeholder="Enter Amount">
-    <button onclick="deposit()">Deposit</button>
-    <button onclick="withdraw()">Withdraw</button>
-    <button onclick="checkBalance()">Check Balance</button>
+    <button id="btnDeposit">Deposit</button>
+    <button id="btnWithdraw">Withdraw</button>
+    <button id="btnCheckBalance">Check Balance</button>
 
-    <div id="output"></div>
+    <!-- Output Display Panel -->
+    <div id="output">Enter details above to begin.</div>
 
+    <!-- Accounts Directory -->
     <h3>All Accounts</h3>
     <div id="accountList"></div>
 </div>
 
-<script src="script.js"></script>
+<!-- Entry point module -->
+<script type="module" src="js/app.js"></script>
 </body>
 </html>
