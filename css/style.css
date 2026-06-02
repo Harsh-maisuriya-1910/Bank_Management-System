@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Plus Jakarta Sans", sans-serif;
+}
+
+:root {
+    --primary-color: #2e7d32;
+    --primary-hover: #1b5e20;
+    --primary-light: #e8f5e9;
+    --accent-color: #4caf50;
+    --bg-gradient: linear-gradient(135deg, #1b5e20 0%, #4caf50 100%);
+    --card-bg: #ffffff;
+    --text-main: #212121;
+    --text-muted: #666666;
+    --border-color: #e0e0e0;
+    --shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    --border-radius: 12px;
+}
+
+body {
+    background: var(--bg-gradient);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    background: var(--card-bg);
+    padding: 30px;
+    width: 100%;
+    max-width: 480px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow);
+    text-align: center;
+    max-height: 90vh;
+    overflow-y: auto;
+    scrollbar-width: none; /* Firefox */
+}
+
+.container::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+}
+
+h1 {
+    font-size: 2rem;
+    font-weight: 800;
+    color: var(--text-main);
+    margin-bottom: 25px;
+    letter-spacing: -0.5px;
+}
+
+h1 span {
+    color: var(--primary-color);
+}
+
+h3 {
+    margin-top: 25px;
+    margin-bottom: 12px;
+    font-size: 1.25rem;
+    color: var(--text-main);
+    text-align: left;
+    font-weight: 700;
+}
+
+/* Form controls styling */
+input {
+    width: 100%;
+    padding: 12px 16px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1.5px solid var(--border-color);
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--text-main);
+    background-color: #fafafa;
+    transition: all 0.25s ease;
+}
+
+input:focus {
+    outline: none;
+    border-color: var(--accent-color);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 3px rgba(76, 175, 80, 0.15);
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    margin: 10px 0 6px 0;
+    border-radius: 8px;
+    border: none;
+    background: var(--primary-color);
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    letter-spacing: 0.5px;
+    box-shadow: 0 4px 6px rgba(46, 125, 50, 0.15);
+}
+
+button:hover {
+    background: var(--primary-hover);
+    transform: translateY(-1px);
+    box-shadow: 0 6px 12px rgba(46, 125, 50, 0.25);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+hr {
+    margin: 25px 0;
+    border: 0;
+    height: 1.5px;
+    background: linear-gradient(to right, transparent, var(--border-color), transparent);
+}
+
+/* Output Display styling */
+#output {
+    margin-top: 20px;
+    padding: 16px;
+    background: var(--primary-light);
+    border-radius: 8px;
+    border-left: 4px solid var(--primary-color);
+    text-align: left;
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #1b5e20;
+    min-height: 50px;
+    transition: all 0.3s ease;
+}
+
+#output span {
+    font-weight: 700;
+    color: var(--primary-hover);
+    display: inline-block;
+    margin-bottom: 6px;
+    font-size: 1rem;
+}
+
+/* Accounts List styling */
+#accountList {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+#accountList div {
+    background: #f9f9f9;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border: 1px solid var(--border-color);
+    text-align: left;
+    transition: all 0.2s ease;
+}
+
+#accountList div:hover {
+    background: #ffffff;
+    border-color: var(--accent-color);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    transform: translateX(2px);
+}
+
+#accountList div strong {
+    color: var(--text-main);
+    font-size: 1rem;
+    font-weight: 600;
+}
