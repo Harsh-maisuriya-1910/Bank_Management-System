@@ -27,6 +27,7 @@ export function renderAccounts(accounts) {
 
     accounts.forEach(acc => {
         const accDiv = document.createElement("div");
+        accDiv.className = "account-item";
         accDiv.innerHTML = `
             <strong>${acc.name}</strong><br>
             Account No: ${acc.accountNumber}
@@ -66,4 +67,22 @@ export function bindWithdraw(handler) {
 
 export function bindCheckBalance(handler) {
     document.getElementById("btnCheckBalance").addEventListener("click", handler);
+}
+
+// 9. Theme switcher event binders & UI mutation
+export function bindThemeToggle(handler) {
+    document.getElementById("themeToggle").addEventListener("click", handler);
+}
+
+export function toggleThemeUI() {
+    const isDark = document.body.classList.toggle("dark-mode");
+    
+    const themeIcon = document.querySelector("#themeToggle .theme-icon");
+    const themeText = document.querySelector("#themeToggle .theme-text");
+    
+    if (isDark) {
+        themeIcon.textContent = "☀️";
+    } else {
+        themeIcon.textContent = "🌙";
+    }
 }

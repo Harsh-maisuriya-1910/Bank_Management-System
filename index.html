@@ -3,35 +3,65 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank System - MVC</title>
+    <title>Bank System - Modern Responsive Dashboard</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<div class="container">
-    <h1><span>Bank</span> System</h1>
+<main class="app">
+    <!-- App Header with Theme Switcher -->
+    <header class="app-header">
+        <button id="themeToggle" class="theme-btn">
+            <span class="theme-icon">🌙</span>
+        </button>
+    </header>
 
-    <!-- Create Account Section -->
-    <input type="text" id="name" placeholder="Enter Name">
-    <input type="number" id="initialBalance" placeholder="Initial Balance">
-    <button id="btnCreateAccount">Create Account</button>
+    <div class="dashboard">
 
-    <hr>
+        <!-- Left Column: Bank operations -->
+        <section class="card bank-card">
+            <h1 class="app-title"><span>Bank</span> System</h1>
 
-    <!-- Transaction Section -->
-    <input type="number" id="accountNumber" placeholder="Enter Account Number">
-    <input type="number" id="transactionAmount" placeholder="Enter Amount">
-    <button id="btnDeposit">Deposit</button>
-    <button id="btnWithdraw">Withdraw</button>
-    <button id="btnCheckBalance">Check Balance</button>
+            <!-- Create Account section -->
+            <div class="section">
+                <h2 class="section-title">Create Account</h2>
+                <div class="form-group">
+                    <input type="text" id="name" placeholder="Enter Name">
+                </div>
+                <div class="form-group">
+                    <input type="number" id="initialBalance" placeholder="Initial Balance">
+                </div>
+                <button id="btnCreateAccount" class="btn btn-primary">Create Account</button>
+            </div>
 
-    <!-- Output Display Panel -->
-    <div id="output">Enter details above to begin.</div>
+            <!-- Transaction operations section -->
+            <div class="section">
+                <h2 class="section-title">Transaction</h2>
+                <div class="form-group">
+                    <input type="number" id="accountNumber" placeholder="Enter Account Number">
+                </div>
+                <div class="form-group">
+                    <input type="number" id="transactionAmount" placeholder="Enter Amount">
+                </div>
+                <div class="button-group">
+                    <button id="btnDeposit" class="btn btn-success">Deposit</button>
+                    <button id="btnWithdraw" class="btn btn-warning">Withdraw</button>
+                    <button id="btnCheckBalance" class="btn btn-info">Check Balance</button>
+                </div>
+            </div>
 
-    <!-- Accounts Directory -->
-    <h3>All Accounts</h3>
-    <div id="accountList"></div>
-</div>
+            <!-- Output panel -->
+            <div id="output" class="message-box">Enter details above to begin.</div>
+        </section>
+
+        <!-- Right Column: Registered Accounts List -->
+        <aside class="card accounts-card">
+            <h2 class="section-title">All Accounts</h2>
+            <div id="accountList" class="account-list"></div>
+        </aside>
+
+    </div>
+</main>
 
 <!-- Entry point module -->
 <script type="module" src="js/app.js"></script>

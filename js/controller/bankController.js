@@ -94,10 +94,16 @@ export function handleCheckBalance() {
     bankView.showOutput(account.getDetails());
 }
 
+// 5. Handles the theme switching action
+export function handleThemeToggle() {
+    bankView.toggleThemeUI();
+}
+
 // Kicks off event bindings
 export function init() {
     bankView.bindCreateAccount(handleCreateAccount);
     bankView.bindDeposit(handleDeposit);
     bankView.bindWithdraw(handleWithdraw);
     bankView.bindCheckBalance(handleCheckBalance);
+    bankView.bindThemeToggle(handleThemeToggle);
 }
